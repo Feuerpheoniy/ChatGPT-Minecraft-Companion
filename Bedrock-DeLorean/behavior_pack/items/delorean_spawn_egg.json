@@ -8,7 +8,7 @@
       }
     },
     "components": {
-      "minecraft:icon": "delorean_spawn_egg",
+      "minecraft:icon": "egg",
       "minecraft:display_name": {
         "value": "DeLorean Spawn Egg"
       },
