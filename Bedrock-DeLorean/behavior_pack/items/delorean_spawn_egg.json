@@ -1,0 +1,20 @@
+{
+  "format_version": "1.20.0",
+  "minecraft:item": {
+    "description": {
+      "identifier": "feuer:delorean_spawn_egg",
+      "menu_category": {
+        "category": "items"
+      }
+    },
+    "components": {
+      "minecraft:icon": "delorean_spawn_egg",
+      "minecraft:display_name": {
+        "value": "DeLorean Spawn Egg"
+      },
+      "minecraft:entity_placer": {
+        "entity": "feuer:delorean"
+      }
+    }
+  }
+}
