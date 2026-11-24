@@ -1,0 +1,67 @@
+{
+  "format_version": "1.20.80",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "feuer:delorean",
+      "is_spawnable": true,
+      "is_summonable": true,
+      "is_experimental": false
+    },
+    "components": {
+      "minecraft:type_family": {
+        "family": [
+          "delorean",
+          "vehicle"
+        ]
+      },
+      "minecraft:collision_box": {
+        "width": 1.9,
+        "height": 1.25
+      },
+      "minecraft:health": {
+        "value": 40,
+        "max": 40
+      },
+      "minecraft:physics": {
+        "has_gravity": true,
+        "has_collision": true
+      },
+      "minecraft:movement": {
+        "value": 0.22
+      },
+      "minecraft:movement.basic": {},
+      "minecraft:input_ground_controlled": {},
+      "minecraft:rideable": {
+        "seat_count": 2,
+        "family_types": [
+          "player"
+        ],
+        "crouching_skip_interact": true,
+        "controlling_seat": 0,
+        "seats": [
+          {
+            "position": [
+              -0.35,
+              0.8,
+              -0.1
+            ]
+          },
+          {
+            "position": [
+              0.35,
+              0.8,
+              -0.1
+            ]
+          }
+        ]
+      },
+      "minecraft:pushable": {
+        "is_pushable": false,
+        "is_pushable_by_piston": true
+      },
+      "minecraft:despawn": {
+        "despawn_from_distance": false
+      }
+    }
+  }
+}
