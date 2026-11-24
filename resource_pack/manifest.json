@@ -1,0 +1,29 @@
+{
+  "format_version": 2,
+  "header": {
+    "name": "ChatGPT Companion - Resources",
+    "description": "Resource pack for the ChatGPT Minecraft Companion.",
+    "uuid": "b9c8d7e6-f5a4-4321-9876-1234567890ab",
+    "version": [
+      1,
+      0,
+      0
+    ],
+    "min_engine_version": [
+      1,
+      26,
+      60
+    ]
+  },
+  "modules": [
+    {
+      "type": "resources",
+      "uuid": "c0d1e2f3-a4b5-4678-9012-abcdef123456",
+      "version": [
+        1,
+        0,
+        0
+      ]
+    }
+  ]
+}
