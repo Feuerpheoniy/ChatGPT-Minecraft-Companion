@@ -1,0 +1,39 @@
+{
+  "format_version": 2,
+  "header": {
+    "name": "ChatGPT Companion - Behavior",
+    "description": "Behavior pack for the ChatGPT Minecraft Companion.",
+    "uuid": "2b51f5c1-3e52-4b0c-8e42-31d7ac9d1041",
+    "version": [
+      1,
+      0,
+      0
+    ],
+    "min_engine_version": [
+      1,
+      26,
+      60
+    ]
+  },
+  "modules": [
+    {
+      "type": "data",
+      "uuid": "a6f4f2c9-9f71-4c8c-a4a9-b0f5b9b1e202",
+      "version": [
+        1,
+        0,
+        0
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "uuid": "b9c8d7e6-f5a4-4321-9876-1234567890ab",
+      "version": [
+        1,
+        0,
+        0
+      ]
+    }
+  ]
+}
