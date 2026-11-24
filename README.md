@@ -1,57 +1,74 @@
 # ChatGPT Minecraft Companion
 
-A Bedrock Edition companion add-on project for Minecraft on Android, with development and testing supported from a Windows PC.
+A Bedrock Edition companion add-on project for Minecraft on Android, with development and packaging supported from a Windows PC.
 
 ## Goal
 
 Create a custom in-game companion that can appear in the player's Minecraft world, follow or respond to simple commands, and later connect to an AI service through a separate bridge.
 
-**Important limitation:** a Bedrock add-on entity is not a real multiplayer player account. The first version is a custom companion entity (NPC-like), not a second human player. AI chat and remote control will be added only after the basic add-on works reliably.
+**Important limitation:** a Bedrock add-on entity is not a real multiplayer player account. The current prototype is an NPC-like companion, not a second human player. AI chat and remote control are not implemented yet.
 
 ## Target setup
 
 - Minecraft Bedrock Edition on Android (Google Play)
-- Target game version: 26.66 (engine version 1.26.66, as reported by the user)
+- Target game version reported by the user: 26.66
 - Samsung Galaxy S21 for playing and testing
-- Windows PC/laptop for project files and any optional bridge service
+- Windows PC/laptop for project files and packaging
 - GitHub repository for source control
 
-## Current prototype: 0.1
+## Current prototype: 0.2
 
-The first behavior/resource pack files are now in the repository:
+- The companion still uses the vanilla Allay appearance as a temporary placeholder.
+- The companion can be tamed with a diamond.
+- Once tamed, it is configured to follow its owner, look at nearby players, and wander when it has no follow target.
+- It can be summoned in a test world with `/summon companion:chatgpt_companion`.
 
-- `behavior_pack/manifest.json`
-- `behavior_pack/entities/chatgpt_companion.json`
-- `resource_pack/manifest.json`
-- German and English entity-name translations
+This behavior has been added to the source but has **not yet been tested in the user's Minecraft world**. The custom robot/player-like model, face-screen ChatGPT logo, stay/return commands, and AI chat are still future work.
 
-The entity currently uses the vanilla Allay appearance as a temporary placeholder. It can look at nearby players, wander, and move toward a player holding a diamond. This is a basic test behavior, not yet a true owner-based follow command or ChatGPT connection.
+## Build the .mcaddon on Windows
+
+The repository includes `Build-Addon.ps1`. From the repository folder, run PowerShell:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .\Build-Addon.ps1
+```
+
+The script creates:
+
+```
+dist/ChatGPT-Minecraft-Companion-0.2.mcaddon
+```
+
+The .mcaddon is a ZIP container holding two separate .mcpack files. Each pack's `manifest.json` is placed at the root of its own .mcpack.
+
+Transfer the generated file to the Android device and open it with Minecraft. In Minecraft, activate both **ChatGPT Companion - Behavior** and **ChatGPT Companion - Resources** in the test world's pack settings.
 
 ## First in-game test
 
-1. Import/enable both the behavior pack and resource pack in a new test world.
-2. Enable cheats in that test world.
-3. Run: `/summon companion:chatgpt_companion`
-4. Hold a diamond and check whether the companion approaches you.
-5. Check whether its name appears as **ChatGPT-Begleiter**.
+1. Import the generated .mcaddon file.
+2. Create a new test world and enable both companion packs.
+3. Enable cheats in that test world.
+4. Run: `/summon companion:chatgpt_companion`
+5. Hold a diamond and interact with the companion to tame it.
+6. Walk away and check whether it follows you.
 
-If the entity does not load or the game reports a content error, send the exact error text or a screenshot. Do not enable experimental toggles unless the game specifically reports that one is required.
+If Minecraft reports an import or content error, send the exact error text or a screenshot. The packaging script fixes the archive layout, but the final import and runtime behavior still need an on-device test. Do not enable experimental toggles unless Minecraft specifically says one is required.
 
 ## Project layout
 
 - `behavior_pack/` — companion entity behavior and gameplay logic
 - `resource_pack/` — companion appearance, model, and textures
-- `server/` — optional local bridge for later AI connectivity
-- `config/` — local configuration examples (never commit API keys)
+- `Build-Addon.ps1` — creates the distributable .mcaddon on Windows
+- `dist/` — generated output (not committed)
 - `docs/` — setup notes and development milestones
 
 ## Planned milestones
 
 1. **Add-on foundation:** valid behavior/resource pack manifests and a companion entity.
-2. **In-game testing:** import the packs into Bedrock and spawn the companion in a test world.
+2. **In-game testing:** import the packs into Bedrock and verify spawning, taming, and following.
 3. **Basic commands:** follow, stay, and return.
-4. **Optional AI bridge:** connect the companion to an AI service through a separately running program, with credentials kept locally.
-5. **Polish:** custom model, animations, sounds, and installation guide.
+4. **Custom appearance:** robot/player-like model, animations, and ChatGPT logo on the head display.
+5. **Optional AI bridge:** connect the companion to an AI service through a separately running program, with credentials kept locally.
 
 ## Safety and privacy
 
