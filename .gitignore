@@ -1,0 +1,21 @@
+# Local secrets and configuration
+.env
+.env.*
+!.env.example
+config/local.json
+
+# Node / tooling
+node_modules/
+npm-debug.log*
+dist/
+build/
+
+# Editor and OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Generated Minecraft packages
+*.mcaddon
+*.mcpack
