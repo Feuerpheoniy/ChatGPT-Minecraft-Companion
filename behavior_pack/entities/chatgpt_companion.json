@@ -40,16 +40,23 @@
         "is_pushable": true,
         "is_pushable_by_piston": true
       },
+      "minecraft:tameable": {
+        "probability": 1.0,
+        "tame_items": [
+          "minecraft:diamond"
+        ]
+      },
       "minecraft:behavior.float": {
         "priority": 0
       },
-      "minecraft:behavior.tempt": {
+      "minecraft:behavior.follow_owner": {
         "priority": 1,
-        "speed_multiplier": 1.2,
-        "items": [
-          "minecraft:diamond"
-        ],
-        "within_radius": 12
+        "speed_multiplier": 1.15,
+        "start_distance": 5,
+        "stop_distance": 2,
+        "can_teleport": true,
+        "max_distance": 24,
+        "post_teleport_distance": 3
       },
       "minecraft:behavior.look_at_player": {
         "priority": 2,
