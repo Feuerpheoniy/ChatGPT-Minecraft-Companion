@@ -1,0 +1,39 @@
+{
+  "format_version": 2,
+  "header": {
+    "name": "DeLorean Time Machine - Behavior Pack",
+    "description": "Rideable DeLorean prototype",
+    "uuid": "6a2cdd4b-0c0d-4f62-a18e-2e2f38c6d4d1",
+    "version": [
+      1,
+      0,
+      0
+    ],
+    "min_engine_version": [
+      1,
+      21,
+      80
+    ]
+  },
+  "modules": [
+    {
+      "type": "data",
+      "uuid": "d1d2d6c1-97f6-4e37-a7f0-47a37a9e3c31",
+      "version": [
+        1,
+        0,
+        0
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "uuid": "6a2cdd4b-0c0d-4f62-a18e-2e2f38c6d4d2",
+      "version": [
+        1,
+        0,
+        0
+      ]
+    }
+  ]
+}
