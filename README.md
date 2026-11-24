@@ -16,7 +16,7 @@ Create a custom in-game companion that can appear in the player's Minecraft worl
 - Windows PC/laptop for project files and packaging
 - GitHub repository for source control
 
-## Current prototype: 0.2
+## Current prototype: 0.3
 
 - The companion still uses the vanilla Allay appearance as a temporary placeholder.
 - The companion can be tamed with a diamond.
@@ -24,6 +24,16 @@ Create a custom in-game companion that can appear in the player's Minecraft worl
 - It can be summoned in a test world with `/summon companion:chatgpt_companion`.
 
 This behavior has been added to the source but has **not yet been tested in the user's Minecraft world**. The custom robot/player-like model, face-screen ChatGPT logo, stay/return commands, and AI chat are still future work.
+
+## Build something by command
+
+In a test world with cheats enabled, open chat and enter one of these commands:
+
+- `/scriptevent companion:build haus` — builds a compact 7×7 wooden starter house a few blocks in front of you.
+- `/scriptevent companion:build turm` — builds a small stone lookout tower in front of you.
+- `/scriptevent companion:build hilfe` — shows the available build commands.
+
+These are fixed blueprints for now; the companion cannot yet understand arbitrary requests such as “build me a castle”. The Script API implementation and the exact `@minecraft/server` dependency still need to be tested in the user's installed Bedrock version.
 
 ## Build the .mcaddon on Windows
 
