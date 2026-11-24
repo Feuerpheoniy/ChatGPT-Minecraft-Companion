@@ -7,7 +7,7 @@
         "default": "entity"
       },
       "textures": {
-        "default": "textures/entity/delorean"
+        "default": "textures/entity/iron_golem"
       },
       "geometry": {
         "default": "geometry.feuer.delorean"
