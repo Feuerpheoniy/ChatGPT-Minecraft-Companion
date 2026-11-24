@@ -1,16 +1,16 @@
 # Development Roadmap
 
-## Phase 1 — playable companion
+## Phase 1 — first in-game prototype
 
-- [ ] Confirm the exact Minecraft Bedrock version on the Android device.
-- [ ] Create behavior pack and resource pack manifests.
-- [ ] Add a custom companion entity with a simple placeholder appearance.
+- [x] Confirm target Bedrock version: 26.66 / engine 1.26.66 (user-reported).
+- [x] Create behavior pack and resource pack manifests.
+- [x] Add a summonable companion entity with a temporary Allay appearance.
 - [ ] Import both packs into a test world.
-- [ ] Verify that the entity spawns and behaves correctly.
+- [ ] Verify that the entity spawns and its temporary behavior works.
 
-## Phase 2 — simple controls
+## Phase 2 — companion controls
 
-- [ ] Add follow behavior.
+- [ ] Implement reliable follow behavior.
 - [ ] Add stay behavior.
 - [ ] Add return-to-player behavior.
 - [ ] Add clear in-game feedback for each command.
