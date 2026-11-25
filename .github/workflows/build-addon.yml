@@ -24,6 +24,9 @@ jobs:
       - uses: actions/upload-artifact@v4
         with:
           name: ChatGPT-Minecraft-Companion-0.4
-          path: dist/ChatGPT-Minecraft-Companion-0.4.mcaddon
+          path: |
+            dist/ChatGPT-Minecraft-Companion-0.4.mcaddon
+            dist/ChatGPT-Companion-Behavior.zip
+            dist/ChatGPT-Companion-Resources.zip
           if-no-files-found: error
           retention-days: 30
