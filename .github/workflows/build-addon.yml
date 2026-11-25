@@ -1,0 +1,29 @@
+name: Build Minecraft Add-on
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+  actions: write
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Package behavior and resource packs
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p dist
+          (cd behavior_pack && zip -qr ../dist/ChatGPT-Companion-Behavior.zip .)
+          (cd resource_pack && zip -qr ../dist/ChatGPT-Companion-Resources.zip .)
+          cp dist/ChatGPT-Companion-Behavior.zip dist/ChatGPT-Companion-Behavior.mcpack
+          cp dist/ChatGPT-Companion-Resources.zip dist/ChatGPT-Companion-Resources.mcpack
+          (cd dist && zip -q ChatGPT-Minecraft-Companion-0.4.mcaddon ChatGPT-Companion-Behavior.mcpack ChatGPT-Companion-Resources.mcpack)
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ChatGPT-Minecraft-Companion-0.4
+          path: dist/ChatGPT-Minecraft-Companion-0.4.mcaddon
+          if-no-files-found: error
+          retention-days: 30
