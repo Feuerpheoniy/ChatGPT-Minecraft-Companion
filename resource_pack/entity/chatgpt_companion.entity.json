@@ -1,0 +1,12 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "companion:chatgpt_companion",
+      "materials": { "default": "entity_alphatest" },
+      "textures": { "default": "textures/entity/chatgpt_robot" },
+      "geometry": { "default": "geometry.chatgpt_robot" },
+      "render_controllers": ["controller.render.chatgpt_robot"]
+    }
+  }
+}
