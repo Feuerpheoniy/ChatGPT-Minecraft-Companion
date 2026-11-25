@@ -16,14 +16,14 @@ Create a custom in-game companion that can appear in the player's Minecraft worl
 - Windows PC/laptop for project files and packaging
 - GitHub repository for source control
 
-## Current prototype: 0.3
+## Current prototype: 0.4
 
-- The companion still uses the vanilla Allay appearance as a temporary placeholder.
+- A first custom robot model and pixel texture are now included: cream-colored armor, dark joints, teal head display with a stylized ChatGPT-inspired icon, and red/blue accents.
 - The companion can be tamed with a diamond.
 - Once tamed, it is configured to follow its owner, look at nearby players, and wander when it has no follow target.
 - It can be summoned in a test world with `/summon companion:chatgpt_companion`.
 
-This behavior has been added to the source but has **not yet been tested in the user's Minecraft world**. The custom robot/player-like model, face-screen ChatGPT logo, stay/return commands, and AI chat are still future work.
+This behavior has been added to the source but has **not yet been tested in the user's Minecraft world**. The new custom model is committed but still needs an in-game rendering test. Stay/return commands and AI chat are future work.
 
 ## Build something by command
 
