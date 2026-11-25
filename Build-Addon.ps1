@@ -20,8 +20,8 @@ try {
     $rpZip = Join-Path $tempDir "ChatGPT-Companion-Resources.zip"
     $bpMcpack = Join-Path $tempDir "ChatGPT-Companion-Behavior.mcpack"
     $rpMcpack = Join-Path $tempDir "ChatGPT-Companion-Resources.mcpack"
-    $addonZip = Join-Path $outDir "ChatGPT-Minecraft-Companion-0.2.zip"
-    $addonFile = Join-Path $outDir "ChatGPT-Minecraft-Companion-0.2.mcaddon"
+    $addonZip = Join-Path $outDir "ChatGPT-Minecraft-Companion-0.4.zip"
+    $addonFile = Join-Path $outDir "ChatGPT-Minecraft-Companion-0.4.mcaddon"
 
     Compress-Archive -Path (Join-Path $bp "*") -DestinationPath $bpZip -Force
     Compress-Archive -Path (Join-Path $rp "*") -DestinationPath $rpZip -Force
